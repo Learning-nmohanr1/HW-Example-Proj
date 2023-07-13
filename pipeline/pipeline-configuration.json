@@ -1,0 +1,74 @@
+{
+    "_EcoBoost_Tekton_Pipeline_": {
+        "version": "3.0.0",
+        "reference": "https://github.ford.com/DevEnablement/ecoboost-tekton-pipeline"
+    },
+
+    "gitHubBranchToDeploymentMappings": {
+      "master": {
+        "pipelineConfigEnv": "dev",
+        "skipCIChecksForProtectedBranch": false
+      },
+      "main": {
+        "pipelineConfigEnv": "dev",
+        "skipCIChecksForProtectedBranch": false
+      }
+    },
+
+    "nexus": {
+        "enabled": false,
+        "secretName": "nexus-private",
+        "repoUrl": "'https://www.nexus.ford.com/repository/[TEAM-REPO-NAME]",
+        "downloadMyPreviouslyBuiltArtifact": false
+    },
+
+    "sonarqube": {
+        "enabled": false,
+        "secretName": "sonar-private",
+        "projectKey": "[SONARQUBE-PROJECT-KEY]",
+        "enableBranchAnalysis": false,
+        "enableBreakBuildOnIssue": false
+    },
+
+    "checkmarx": {
+        "enabled": false,
+        "secretName": "checkmarx-private",
+        "serverUrl": "https://www.checkmarx.ford.com",
+        "projectName": "devsecops-service-helloworld",
+        "teamPath": "[CHECKMARX-TEAM-PATH]",
+        "presetId": "Ford - Web Services",
+        "enableBreakBuildOnIssue": false,
+        "allowedHighSeverity": 0,
+        "allowedMediumSeverity": 0,
+        "allowedLowSeverity": 0
+    },
+
+    "fossa": {
+        "enabled": false,
+        "secretName": "fossa-private",
+        "projectName": "devsecops-service-helloworld",
+        "teamName": "[FOSSA-TEAM-NAME]",
+        "policyName": "Website/Hosted Service Use",
+        "enableBreakBuildOnIssue": false
+    },
+
+    "githubNotification": {
+        "enabled": true,
+        "secretName": "github-https"
+    },
+    
+    "doraMetrics": {
+      "enabled": false,
+      "environment": "[prod, stage, or dev]",
+      "secretName": "github-https",
+      "appId": "[APP-ID]"
+    },
+
+    "smartIt": {
+        "enabled": false,
+        "environment": "[QA or PROD]",
+        "appId": "[APP-ID]",
+        "requestorId": "[CDS-ID]",
+        "enableBreakBuildOnIssue": false
+    }
+}

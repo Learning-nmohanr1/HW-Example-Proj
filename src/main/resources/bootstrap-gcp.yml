@@ -1,0 +1,7 @@
+# enable gcp secrets manager for gcp profile to utilize secrets management pattern
+spring:
+  cloud:
+    gcp:
+      secretmanager:
+        enabled: true
+        legacy: false

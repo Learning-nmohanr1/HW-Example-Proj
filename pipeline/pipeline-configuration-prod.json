@@ -1,0 +1,50 @@
+{
+    "_EcoBoost_Tekton_Pipeline_": {
+        "version": "3.0.0",
+        "reference": "https://github.ford.com/DevEnablement/ecoboost-tekton-pipeline"
+    },
+
+    "cloudRun": {
+        "enabled": false,
+        "secretName": "google-creds-prod",
+        "serviceName": "devsecops-svc-helloworld",
+        "projectId": "[GCP-PROJECT-ID]",
+        "region": "us-central1",
+        "imageLocation": "us-central1-docker.pkg.dev/[GCP-PROJECT-ID]/ford-container-images",
+        "imageTag": "1.0",
+        "allowUnauthenticated": false,
+        "vpcConnector": "projects/prj-p-gen-priv-net-19b4/locations/us-central1/connectors/prod-priv-gen-central1",
+        "ingress": "internal",
+        "vpcEgress": "all-traffic",
+        "cloudRunServiceAccount": "[CLOUDRUN-IDENTITY-SERVICE-ACCOUNT]",
+        "cloudRunInvokerPrincipals": "[CLOUDRUN-INVOKER-ROLE-PRINCIPALS]",
+        "env": {
+            "SPRING_PROFILES_ACTIVE": "prod, gcp",
+            "JAVA_TOOL_OPTIONS": "-Dlogging.level.org.springframework.web=WARN -Dlogging.level.org.springframework.security=WARN -Dlogging.level.com.ford.*=WARN"
+        },
+        "additionalFlags": "--min-instances=2 --memory=8Gi --cpu=4 --cpu-boost",
+        "acceptanceTesting": {
+            "clientCredentials": {
+                "secretName": "",
+                "accessTokenUri": "https://login.microsoftonline.com/azureford.onmicrosoft.com/oauth2/v2.0/token",
+                "scope": "[AZURE-AD-SCOPE]",
+                "resource": "[ADFS-RESOURCE]"
+            },
+            "genericId": {
+                "secretName": "",
+                "accessTokenUri": "https://login.microsoftonline.com/azureford.onmicrosoft.com/oauth2/v2.0/token",
+                "clientId": "[CLIENT-ID]"
+            },
+            "basicAuthentication": {
+                "secretName": ""
+            }
+        }
+    },
+
+    "logToGcs": {
+        "enabled": false,
+        "secretName": "google-creds-prod",
+        "projectId": "[GCP-PROJECT-ID]",
+        "logBucket": "[GCS bucket name without gs:/]"
+    }
+}

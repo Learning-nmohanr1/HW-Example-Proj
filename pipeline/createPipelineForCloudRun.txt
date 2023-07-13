@@ -1,0 +1,3 @@
+You can create or upgrade a Tekton Pipeline for this application in your OpenShift namespace, using the EcoBoost Tekton Application CI/CD Pipeline Generator available at DevServices -> https://devservices.ford.com/tekton-pipeline.
+
+Read the comprehensive Tekton Pipeline Dev Guide (https://github.ford.com/DevEnablement/ecoboost-tekton-pipeline#how-to-use-it) to understand the prerequisites and pipeline configurations.
