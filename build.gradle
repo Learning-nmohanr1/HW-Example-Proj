@@ -9,8 +9,8 @@ plugins {
 }
 
 group = 'com.ford.devsecops'
-version = gradleBoost.fn.gitVersion()
-println "Build Version = ${version ?: '[none]'}"
+//version = gradleBoost.fn.gitVersion()
+//println "Build Version = ${version ?: '[none]'}"
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
@@ -42,7 +42,7 @@ dependencies {
 	implementation 'com.ford.cloudnative:spring-base-security:2.0.0'
 
 	//secrets manager
-	implementation 'com.google.cloud:spring-cloud-gcp-starter-secretmanager'
+	//implementation 'com.google.cloud:spring-cloud-gcp-starter-secretmanager'
 
 	//other
 	compileOnly 'org.projectlombok:lombok'

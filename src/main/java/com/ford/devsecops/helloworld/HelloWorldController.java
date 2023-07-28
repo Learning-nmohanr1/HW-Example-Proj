@@ -1,11 +1,13 @@
 
 package com.ford.devsecops.helloworld;
 
+import org.springframework.web.bind.annotation.*;
+
 @RestController  
 public class HelloWorldController {
-@RequestMapping("/")  
+@GetMapping("/")
 public String hello()   
 {  
-return "Hello welcome to javaTpoint";
+return "Hello javaTpoint";
 }  
 }
