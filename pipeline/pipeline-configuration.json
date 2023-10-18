@@ -31,11 +31,11 @@
     },
 
     "checkmarx": {
-        "enabled": false,
+        "enabled": true,
         "secretName": "checkmarx-private",
         "serverUrl": "https://www.checkmarx.ford.com",
         "projectName": "devsecops-service-helloworld",
-        "teamPath": "[CHECKMARX-TEAM-PATH]",
+        "teamPath": "/CxServer/Ford Enterprise/Marketing and Sales/Porting-Centre",
         "presetId": "Ford - Web Services",
         "enableBreakBuildOnIssue": false,
         "allowedHighSeverity": 0,
