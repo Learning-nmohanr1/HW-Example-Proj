@@ -44,10 +44,10 @@
     },
 
     "fossa": {
-        "enabled": false,
+        "enabled": true,
         "secretName": "fossa-private",
         "projectName": "devsecops-service-helloworld",
-        "teamName": "[FOSSA-TEAM-NAME]",
+        "teamName": "helloworldsample",
         "policyName": "Website/Hosted Service Use",
         "enableBreakBuildOnIssue": false
     },
