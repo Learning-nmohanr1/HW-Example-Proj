@@ -12,6 +12,10 @@
       "main": {
         "pipelineConfigEnv": "dev",
         "skipCIChecksForProtectedBranch": false
+      },
+      "US12345": {
+        "pipelineConfigEnv": "dev",
+        "skipCIChecksForProtectedBranch": false
       }
     },
 
@@ -47,7 +51,7 @@
         "enabled": true,
         "secretName": "fossa-private",
         "projectName": "devsecops-service-helloworld",
-        "teamName": "helloworldsample",
+        "teamName": "PC-ADSAPA-20918",
         "policyName": "Website/Hosted Service Use",
         "enableBreakBuildOnIssue": false
     },
