@@ -5,7 +5,7 @@
     },
 
     "cloudRun": {
-        "enabled": false,
+        "enabled": true,
         "secretName": "google-creds-dev",
         "serviceName": "devsecops-svc-helloworld-dev",
         "projectId": "[GCP-PROJECT-ID]",
