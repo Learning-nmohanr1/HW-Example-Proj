@@ -8,7 +8,7 @@
         "enabled": true,
         "secretName": "google-creds-dev",
         "serviceName": "devsecops-svc-helloworld-dev",
-        "projectId": "[GCP-PROJECT-ID]",
+        "projectId": "ford-d731b67cc9782bc1a82b7b64",
         "region": "us-central1",
         "imageLocation": "us-central1-docker.pkg.dev/[GCP-PROJECT-ID]/ford-container-images",
         "imageTag": "1.0",
