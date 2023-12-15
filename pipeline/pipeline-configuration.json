@@ -35,7 +35,7 @@
     },
 
     "checkmarx": {
-        "enabled": true,
+        "enabled": false,
         "secretName": "checkmarx-private",
         "serverUrl": "https://www.checkmarx.ford.com",
         "projectName": "devsecops-service-helloworld",
@@ -48,7 +48,7 @@
     },
 
     "fossa": {
-        "enabled": true,
+        "enabled": false,
         "secretName": "fossa-private",
         "projectName": "devsecops-service-helloworld",
         "teamName": "PC-ADSAPA-20918",
