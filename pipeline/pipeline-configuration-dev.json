@@ -10,14 +10,14 @@
         "serviceName": "devsecops-svc-helloworld-dev",
         "projectId": "ford-d731b67cc9782bc1a82b7b64",
         "region": "us-central1",
-        "imageLocation": "us-central1-docker.pkg.dev/[GCP-PROJECT-ID]/ford-container-images",
+        "imageLocation": "us-central1-docker.pkg.dev/ford-d731b67cc9782bc1a82b7b64/ford-container-images",
         "imageTag": "1.0",
         "allowUnauthenticated": false,
         "vpcConnector": "projects/prj-pp-gen-preprod-net-acc7/locations/us-central1/connectors/preprod-gen-central1",
         "ingress": "internal",
         "vpcEgress": "all-traffic",
-        "cloudRunServiceAccount": "[CLOUDRUN-IDENTITY-SERVICE-ACCOUNT]",
-        "cloudRunInvokerPrincipals": "[CLOUDRUN-INVOKER-ROLE-PRINCIPALS]",
+        "cloudRunServiceAccount": "sa-pipeline@ford-d731b67cc9782bc1a82b7b64.iam.gserviceaccount.com",
+        "cloudRunInvokerPrincipals": "allUsers",
         "env": {
             "SPRING_PROFILES_ACTIVE": "dev, gcp",
             "JAVA_TOOL_OPTIONS": "-Dlogging.level.org.springframework.web=DEBUG -Dlogging.level.org.springframework.security=DEBUG -Dlogging.level.com.ford.*=DEBUG"
